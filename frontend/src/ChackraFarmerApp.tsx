@@ -13,6 +13,7 @@ import './chackra-farmer-base.css'
 import ChoklitoTour from './ChoklitoTour'
 import {prepareZonePlan} from './spatialPlanClient'
 import ChackraInfoPage from './ChackraInfoPage'
+import ChackraTeamPage from './ChackraTeamPage'
 import {CropPhotoGuide} from './CropPhotoGuide'
 import {parseGeoJSONPolygon} from './geometry'
 import {imergApproxCell} from './imerg-grid'
@@ -246,15 +247,15 @@ export default function ChackraFarmerApp(){
  const t=LABELS[lang]
  const [step,setStep]=useState<Step>(0)
  const [landing,setLanding]=useState(true)
- const [infoPage,setInfoPage]=useState<'how'|'sources'|null>(()=>{
-  const p=window.location.pathname;return p==='/como-funciona'?'how':p==='/fuentes'?'sources':null
+ const [infoPage,setInfoPage]=useState<'how'|'sources'|'team'|null>(()=>{
+  const p=window.location.pathname;return p==='/como-funciona'?'how':p==='/fuentes'?'sources':p==='/equipo'||p==='/team'?'team':null
  })
  useEffect(()=>{
-  const onPop=()=>{const p=window.location.pathname;setInfoPage(p==='/como-funciona'?'how':p==='/fuentes'?'sources':null)}
+  const onPop=()=>{const p=window.location.pathname;setInfoPage(p==='/como-funciona'?'how':p==='/fuentes'?'sources':p==='/equipo'||p==='/team'?'team':null)}
   window.addEventListener('popstate',onPop);return()=>window.removeEventListener('popstate',onPop)
  },[])
- function showPage(page:'how'|'sources'|null){
-  const path=page==='how'?'/como-funciona':page==='sources'?'/fuentes':'/'
+ function showPage(page:'how'|'sources'|'team'|null){
+  const path=page==='how'?'/como-funciona':page==='sources'?'/fuentes':page==='team'?'/equipo':'/'
   if(window.location.pathname!==path)window.history.pushState({},'',path+window.location.search)
   setInfoPage(page);window.scrollTo({top:0,behavior:'auto'})
  }
@@ -727,7 +728,8 @@ export default function ChackraFarmerApp(){
    {economicReport.strategies.map(x=><p key={x.strategy_id}><strong>{x.strategy_id==='S0'?t.current:x.strategy_id}:</strong> {x.margin_soles_ha_24months==null?(lang==='es'?'Datos incompletos':'Incomplete inputs'):'S/ '+x.margin_soles_ha_24months.toLocaleString(lang==='es'?'es-PE':'en-US')}</p>)}
   </div>}
   <p>{sampleNote?(lang==='es'?'Terreno mostrado para demostración; los cultivos registrados fueron proporcionados durante esta sesión.':'Field used for demonstration; crop inputs were supplied during this session.'):''}</p></div></div>}
- if(infoPage)return <ChackraInfoPage page={infoPage} lang={lang} onBack={()=>showPage(null)} onNavigate={showPage}/>
+ if(infoPage==='team')return <ChackraTeamPage lang={lang} onBack={()=>showPage(null)}/>
+  if(infoPage)return <ChackraInfoPage page={infoPage} lang={lang} onBack={()=>showPage(null)} onNavigate={showPage}/>
  return <div className={'b-app chackra-farmer-clean '+(new URLSearchParams(window.location.search).get('research')==='1'?'chackra-research ':'')+(spatialPlan?'chackra-has-zone-print':'')}>
   <a className="b-skip" href="#main">Ir al contenido / Skip to content</a>
   <header className="b-header"><div className="b-header-inner">
@@ -735,6 +737,7 @@ export default function ChackraFarmerApp(){
  <nav className="chackra-nav" aria-label={lang==='es'?'Navegación principal':'Main navigation'}>
  <a href="/como-funciona" onClick={e=>{e.preventDefault();showPage('how')}}>{lang==='es'?'Cómo funciona':'How it works'}</a>
  <a href="/fuentes" onClick={e=>{e.preventDefault();showPage('sources')}}>{lang==='es'?'Fuentes':'Sources'}</a>
+  <a href="/equipo" onClick={e=>{e.preventDefault();showPage('team')}}>{lang==='es'?'Nuestro equipo':'Our team'}</a>
  </nav>
  <div className="b-header-tools"><button className="chackra-nav-cta" aria-label={lang==='es'?'Ir al mapa':'Go to the map'} onClick={()=>{setLanding(false);navigate(0);setTimeout(()=>document.getElementById('chackra-field')?.scrollIntoView({behavior:'smooth'}),0)}}><span className="chackra-nav-long">{lang==='es'?'Ir al mapa':'Go to the map'}</span><span className="chackra-nav-short" aria-hidden="true">{lang==='es'?'Mapa':'Map'}</span><Icon name="right" size={16}/></button>
  <button type="button" className="chackra-theme-toggle" aria-pressed={theme==='light'} aria-label={theme==='light'?(lang==='es'?'Cambiar a modo oscuro':'Switch to dark mode'):(lang==='es'?'Cambiar a modo claro':'Switch to light mode')} title={theme==='light'?'Dark':'Light'} onClick={()=>setTheme(v=>v==='light'?'dark':'light')}>{theme==='light'?'☾':'☀'}</button>
@@ -960,7 +963,8 @@ export default function ChackraFarmerApp(){
    </section>}
   </main>
   <ChoklitoTour lang={lang} step={step===3?2:step} assigned={assignedCount} zoneCount={availableZones.length||1} landing={landing} fieldReady={Boolean(field)} cropPending={Boolean(pendingCrop)} planReady={Boolean(spatialPlan)} error={step===0?fieldError:spatialError||fieldError}/>
-  <footer className="b-footer"><div><strong>CHACKRA X</strong></div><div className="b-footer-links"><a href="https://github.com/Wilder-reyes/CHACKRA-X/blob/main/docs/NASA.md" target="_blank" rel="noreferrer">{lang==='es'?'Cómo usamos NASA':'How we use NASA'}</a><a href="/como-funciona" onClick={e=>{e.preventDefault();showPage('how')}}>{lang==='es'?'Cómo funciona':'How it works'}</a><a href="/fuentes" onClick={e=>{e.preventDefault();showPage('sources')}}>{lang==='es'?'Fuentes':'Sources'}</a><span>NASA Space Apps Challenge 2026 · Field Shift</span></div></footer>
+  <footer className="b-footer"><div><strong>CHACKRA X</strong></div><div className="b-footer-links"><a href="https://github.com/Wilder-reyes/CHACKRA-X/blob/main/docs/NASA.md" target="_blank" rel="noreferrer">{lang==='es'?'Cómo usamos NASA':'How we use NASA'}</a><a href="/como-funciona" onClick={e=>{e.preventDefault();showPage('how')}}>{lang==='es'?'Cómo funciona':'How it works'}</a><a href="/fuentes" onClick={e=>{e.preventDefault();showPage('sources')}}>{lang==='es'?'Fuentes':'Sources'}</a>
+  <a href="/equipo" onClick={e=>{e.preventDefault();showPage('team')}}>{lang==='es'?'Nuestro equipo':'Our team'}</a><span>NASA Space Apps Challenge 2026 · Field Shift</span></div></footer>
   {printable()}
   {spatialPlan&&field&&<ChackraZonePrint plan={spatialPlan} field={field} subplots={subplots} lang={lang} place={place}/>}
  </div>
