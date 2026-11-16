@@ -13,8 +13,10 @@ class VercelStaticOnlyTests(unittest.TestCase):
         for forbidden in ['services','functions','builds','crons','env']:self.assertNotIn(forbidden,config)
         self.assertEqual(config['rewrites'][0]['source'],'/api/:path*')
         self.assertRegex(config['rewrites'][0]['destination'],r'^https://[^/]+/api/:path\*$')
-        self.assertEqual(config['rewrites'][1],{'source':'/((?!assets/).*)','destination':'/index.html'})
-        self.assertEqual(len(config['rewrites']),2)
+        for index, route in enumerate(['/equipo', '/team', '/fuentes', '/como-funciona'], start=1):
+            self.assertEqual(config['rewrites'][index], {'source':route,'destination':'/index.html'})
+        self.assertEqual(config['rewrites'][5],{'source':'/((?!assets/).*)','destination':'/index.html'})
+        self.assertEqual(len(config['rewrites']),6)
         for name in ['vercel.json','.vercelignore','render.yaml']:self.assertFalse((ROOT/name).exists())
     def test_frontend_build_has_no_backend_and_public_environment_has_no_secret(self):
         self.assertIn('e2e/',(ROOT/'frontend/.vercelignore').read_text())
