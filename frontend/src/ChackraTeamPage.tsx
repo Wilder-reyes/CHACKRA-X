@@ -5,7 +5,7 @@ type Lang='es'|'en'
 const MEMBERS=[
  {name:'Sebastian Cangalaya',roleEs:'Científico de datos',roleEn:'Data Scientist',photo:'/assets/team/sebastian-cangalaya.webp'},
  {name:'Wilder Reyes',roleEs:'Ingeniero mecatrónico',roleEn:'Mechatronics Engineer',photo:'/assets/team/wilder-reyes.webp'},
- {name:'David Sato',roleEs:'Integrante del equipo',roleEn:'Team Member',photo:'/assets/team/david-sato.webp'}
+ {name:'David Sato',roleEs:'Ingeniero mecatrónico',roleEn:'Mechatronics Engineer',photo:'/assets/team/david-sato.webp'}
 ] as const
 
 /** Independent page: no agricultural planning state or API calls. */
