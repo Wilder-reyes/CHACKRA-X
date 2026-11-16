@@ -1,4 +1,4 @@
-# CHACKRA X v0.26 — modelo de IA reproducible sobre datos NASA reales
+# CHACKRA X — fuentes NASA y metodología científica
 
 ## Objetivo único
 
