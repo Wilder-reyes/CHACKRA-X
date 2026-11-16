@@ -3,9 +3,9 @@ import {ChackraMark} from './ChackraIcon'
 
 type Lang='es'|'en'
 const MEMBERS=[
- {name:'Sebastian Cangalaya',roleEs:'Científico de datos',roleEn:'Data Scientist',photo:'/team/sebastian-cangalaya.jpg'},
- {name:'Wilder Reyes',roleEs:'Ingeniero mecatrónico',roleEn:'Mechatronics Engineer',photo:'/team/wilder-reyes.jpg'},
- {name:'David Sato',roleEs:'Integrante del equipo',roleEn:'Team Member',photo:'/team/david-sato.jpg'}
+ {name:'Sebastian Cangalaya',roleEs:'Científico de datos',roleEn:'Data Scientist',photo:'/team/sebastian-cangalaya.webp'},
+ {name:'Wilder Reyes',roleEs:'Ingeniero mecatrónico',roleEn:'Mechatronics Engineer',photo:'/team/wilder-reyes.webp'},
+ {name:'David Sato',roleEs:'Integrante del equipo',roleEn:'Team Member',photo:'/team/david-sato.webp'}
 ] as const
 
 /** Independent page: no agricultural planning state or API calls. */
