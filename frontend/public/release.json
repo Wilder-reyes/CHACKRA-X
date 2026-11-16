@@ -1,0 +1,47 @@
+{
+  "application": "CHACKRA X",
+  "team": "CHACKRA X",
+  "challenge": "NASA Space Apps Challenge 2026 · Field Shift: Adapting Farms with NASA Data",
+  "release": "chackra-x-1.0.0",
+  "environment": "release-candidate",
+  "source_branch": "main",
+  "production": {
+    "frontend": null,
+    "frontend_host": "New Vercel account required; not deployed yet",
+    "api_host": "Render (FastAPI, deployed automatically from main)",
+    "api_proxy": "Vercel rewrites /api/* to the Render API",
+    "api_health_path": "/api/health"
+  },
+  "pilot": "Barranca · Pativilca / Supe (Lima, Peru)",
+  "features": [
+    "Three steps: outline a field, record crops by zone, get a zone plan",
+    "Comparison of 3 rotation strategies (S0 current, S1 Water, S2 Soil) with why, evidence, benefits, gaps and risks",
+    "Printable A4 plan: zone sketch with areas, zone advice and the 3-strategy comparison",
+    "NASA HLS monthly vegetation history of the Barranca study field (observed, months without data are not filled)",
+    "Crop water from FAO-56 Kc x NASA POWER ET0 (calculated, relative)",
+    "Small reproducible seasonal model (44 NASA HLS observations, one study field) — proof of concept"
+  ],
+  "evidence_types": {
+    "observed": "NASA HLS v2.0 satellite NDVI (30 m), GPM IMERG upper-basin rain",
+    "declared": "crops and sowing months entered by the farmer",
+    "calculated": "FAO-56 with NASA POWER ET0; declared zone areas approximated on a WGS84 sphere",
+    "agronomic_rules": "DRA Lima / MIDAGRI sowing calendar, crop families, legumes",
+    "model_inference": "seasonal low-vegetation probability, only for the exact Barranca study polygon"
+  },
+  "computer_vision_enabled": false,
+  "ai_model": "trained_nasa_hls_44_observations_barranca_1",
+  "ai_model_label": "Small reproducible seasonal model (44 NASA HLS observations, one study field) — proof of concept",
+  "ai_model_source": "backend/app/data/history_seed/3365819f83a772e737d341ec1058efac.json",
+  "ai_model_training": "33 chronological HLS observations for holdout evaluation; production fit on all 44",
+  "ai_barranca_holdout": {
+    "test_observations": 11,
+    "accuracy_percent": 63.6364,
+    "precision_percent": 100.0,
+    "recall_percent": 55.5556,
+    "f1_percent": 71.4286,
+    "brier_model": 0.2340806663
+  },
+  "ui_release": "chackra-glass-lime",
+  "notes": "Relative comparisons for discussion with a technician. No yields, profits, water savings or field validation are claimed. Fields outside Barranca receive guidance from general rules only.",
+  "target_repository": "Wilder-reyes/CHACKRA-X"
+}

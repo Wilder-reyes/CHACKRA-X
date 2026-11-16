@@ -1,0 +1,75 @@
+/* CHACKRA X — PPT-inspired farmer experience. Scientific calculations unchanged. */
+.chackra-zone-map-frame,.b-map-frame{border:2px solid rgba(214,248,102,.35);box-shadow:0 18px 52px rgba(4,13,7,.32);border-radius:21px;overflow:hidden}
+.chackra-zone-map{min-height:420px!important}
+.chackra-zone-choices,.chackra-crop-grid{gap:12px}
+.chackra-crop-card{border-radius:17px!important;transition:transform .15s ease,border-color .15s ease,box-shadow .15s ease;cursor:grab}
+.chackra-crop-card:hover,.chackra-crop-card.chosen{transform:translateY(-2px);border-color:#D6F866!important;box-shadow:0 0 0 2px rgba(214,248,102,.18)}
+.chackra-crop-card:active{cursor:grabbing}
+.chackra-crop-card[aria-pressed="true"]{outline:2px solid #D6F866;outline-offset:1px}
+.chackra-zone-choice.chosen{border-color:#D6F866!important}
+.chackra-zone-map-note{font-weight:600}
+.chackra-zone-drag-hint{padding:11px 14px;border:1px solid rgba(214,248,102,.3);border-radius:14px;color:#D6F866;background:rgba(214,248,102,.08);margin:12px 0}
+.chackra-zone-map .leaflet-tooltip.chackra-crop-map-label{border:0;background:rgba(8,25,15,.78);box-shadow:0 3px 12px rgba(0,0,0,.2);color:#fff;padding:4px 7px;font-weight:800;font-size:12px;border-radius:8px;pointer-events:none}
+.chackra-crop-map-label:before{display:none}
+.chackra-horizon{margin:28px auto 24px;padding:26px;max-width:900px;border:1px solid rgba(214,248,102,.36);border-radius:24px;background:linear-gradient(130deg,rgba(30,48,27,.92),rgba(11,25,16,.94));color:#fff}
+.chackra-horizon h1{font-size:clamp(1.6rem,3vw,2.5rem);margin:8px 0;color:#fff}
+.chackra-horizon p{color:#d8e9d4;font-size:1rem;max-width:660px}
+.chackra-horizon-buttons{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}
+.chackra-horizon-buttons button{padding:12px 17px;min-height:48px;border-radius:13px;border:1px solid #66865b;background:#233a29;color:#fff;font-weight:800;cursor:pointer}
+.chackra-horizon-buttons button[aria-pressed="true"]{background:#D6F866;border-color:#D6F866;color:#14220c}
+.chackra-horizon-range{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center}
+.chackra-horizon-range label{font-weight:800}.chackra-horizon-range strong{font-size:1.6rem;color:#D6F866}
+.chackra-horizon-range input{grid-column:1/-1;width:100%;accent-color:#D6F866;min-height:36px}
+.chackra-horizon-actions{display:flex;gap:12px;justify-content:flex-end;flex-wrap:wrap;margin-top:18px}
+.chackra-calendar{margin:24px 0;padding:22px;border-radius:23px;background:#111d15;color:#f3f8ef;border:1px solid #39533b;overflow:hidden}
+.chackra-calendar-intro{display:flex;gap:15px;justify-content:space-between;flex-wrap:wrap}
+.chackra-calendar-intro h2{font-size:clamp(1.3rem,2.7vw,2rem);margin:7px 0;color:#fff}
+.chackra-calendar-intro p{color:#d3e1cc;max-width:560px}
+.chackra-calendar-active{display:flex;flex-direction:column;align-items:flex-end;gap:4px}
+.chackra-calendar-active span{color:#b9cfb5}.chackra-calendar-active strong{color:#D6F866;font-size:1.35rem}
+.chackra-calendar-nav{display:flex;gap:7px;align-items:center;margin:15px 0;flex-wrap:wrap}
+.chackra-calendar-nav button{min-width:44px;min-height:43px;padding:8px 13px;background:#24372a;color:#fff;border:1px solid #466347;border-radius:12px;cursor:pointer}
+.chackra-calendar-nav button.selected{background:#D6F866;color:#14220c;font-weight:900}
+.chackra-calendar-nav button:disabled{opacity:.35;cursor:default}
+.chackra-calendar-scroll{overflow-x:auto;padding:6px 0 12px;scrollbar-color:#799d68 transparent}
+.chackra-calendar-grid{display:grid;width:max-content;gap:3px;align-items:stretch}
+.chackra-calendar-grid .chackra-calendar-row{display:contents}
+.chackra-calendar-sticky{position:sticky;left:0;z-index:3}
+.chackra-calendar-label{display:flex;align-items:center;padding:8px 10px;min-height:42px;background:#1c3021;color:#ecf4e6;font-size:.83rem;font-weight:800;border-radius:8px}
+.chackra-month-head{border:0;border-radius:7px;background:#29432e;color:#f3f9ed;min-height:43px;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;font-size:.78rem}
+.chackra-month-head small{font-size:.64rem;color:#bfd3b5}
+.chackra-month-head.current{outline:2px solid #D6F866;outline-offset:-2px;color:#D6F866}
+.chackra-calendar-slot{border:0;border-radius:6px;min-height:42px;cursor:pointer;font-weight:900;font-size:1.1rem;color:#183322}
+.chackra-calendar-slot.current{outline:3px solid #D6F866;outline-offset:-3px}
+.chackra-calendar-slot.starts{border-left:4px solid #1d4729}
+.chackra-calendar-legend{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0}
+.chackra-calendar-legend span{display:flex;align-items:center;gap:6px;border-radius:12px;background:#203428;color:#e6f0e3;padding:9px 12px;font-size:.84rem}
+.chackra-calendar-legend i{width:13px;height:13px;display:inline-block;border-radius:4px}
+.chackra-calendar-note{color:#c8d4c2;font-size:.82rem}
+.chackra-more-science{margin:22px 0;border:1px solid rgba(214,248,102,.25);border-radius:15px;padding:13px 17px;background:rgba(18,35,23,.55)}
+.chackra-more-science>summary{cursor:pointer;color:#D6F866;font-weight:750;min-height:34px}
+.chackra-more-science[open]>summary{margin-bottom:15px}
+.chackra-plan-sketch svg{border:3px solid #D6F866;border-radius:20px}
+.chackra-print-year{break-inside:avoid;margin:20px 0}
+.chackra-print-year table{width:100%;border-collapse:collapse;font-size:10px}
+.chackra-print-year th,.chackra-print-year td{border:1px solid #bfc6b9;padding:5px;text-align:left}
+.chackra-print-year td span{padding:2px 5px;border-radius:5px;color:#15251c;display:inline-block}
+.bio-guide-root{position:fixed;bottom:18px;right:18px;z-index:1150}
+.bio-guide-root .bio-repeat{position:static}
+.bio-guide-root .choklito-tour{position:static}
+.bio-mascot .bio-body{transform-origin:56px 126px;animation:bio-bob 2.1s ease-in-out infinite}
+.bio-mascot .bio-arm-right{transform-origin:80px 94px;animation:bio-wave 1.4s ease-in-out infinite}
+.choklito-tour{animation:bio-appear .27s ease-out both}
+@keyframes bio-bob{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-4px) rotate(1deg)}}
+@keyframes bio-wave{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(-20deg)}}
+@keyframes bio-appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+[data-theme="light"] .chackra-horizon,[data-theme="light"] .chackra-calendar{background:#f7fbf2;color:#223024;border-color:#91ae88}
+[data-theme="light"] .chackra-horizon h1,[data-theme="light"] .chackra-calendar h2{color:#1a301b}
+[data-theme="light"] .chackra-horizon p,[data-theme="light"] .chackra-calendar p{color:#405d44}
+[data-theme="light"] .chackra-calendar-label{background:#dce9d8;color:#244025}
+[data-theme="light"] .chackra-calendar-legend span{background:#e2eede;color:#1b381b}
+[data-theme="light"] .chackra-calendar-active span{color:#42664a}
+[data-theme="light"] .chackra-calendar-active strong{color:#3c6b30}
+@media(max-width:640px){.chackra-horizon{padding:18px}.chackra-zone-map{min-height:350px!important}.chackra-calendar{padding:13px}.chackra-calendar-active{align-items:flex-start}.bio-guide-root{bottom:8px;right:8px;max-width:calc(100vw - 16px)}.bio-guide-root .choklito-tour{width:min(370px,calc(100vw - 16px))}}
+@media(prefers-reduced-motion:reduce){.bio-mascot .bio-body,.bio-mascot .bio-arm-right,.choklito-tour{animation:none!important}}
+@media print{.bio-guide-root,.chackra-horizon,.chackra-calendar,.chackra-more-science{display:none!important}.chackra-print-year{display:block!important}}

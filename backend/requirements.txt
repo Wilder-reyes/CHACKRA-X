@@ -1,0 +1,24 @@
+# Pin the tested FastAPI/Starlette pair to prevent CI drift.
+fastapi==0.128.2
+starlette==0.50.0
+uvicorn[standard]>=0.30,<1
+httpx>=0.27,<1
+pydantic>=2.7,<3
+python-dotenv>=1.2,<2
+pandas>=2.2,<4
+
+# NASA GPM IMERG / Earthdata
+earthaccess>=0.19,<1
+xarray>=2024.3,<2027
+h5netcdf>=1.3,<2
+h5py>=3.10,<4
+
+# ESA/Copernicus Sentinel-2 L2A COG windowed NDVI, SCL masks
+numpy>=1.26,<3
+rasterio>=1.4,<2
+shapely>=2.0,<3
+pyproj>=3.6,<4
+planetary-computer>=1.0,<2
+
+s3fs>=2025.2,<2027
+# pandas remains necessary to the scientific xarray stack and data scripts.

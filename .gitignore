@@ -1,0 +1,40 @@
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+.venv/
+venv/
+
+# Frontend
+node_modules/
+dist/
+
+# Local data
+*.log
+.DS_Store
+Thumbs.db
+
+# Downloaded NASA datasets (local only)
+/backend/data/
+
+# Locally trained experimental models and QA datasets
+/backend/models/
+/backend/data/
+!frontend/.env.production.example
+
+# Local satellite-history cache (CHACKRAX_CACHE_DIR)
+/backend/.cache/
+*.tsbuildinfo
+.vercel
+.env*
+!.env.example
+!frontend/.env.production.example
+
+# Local browser verification artifacts
+frontend/test-results/
+frontend/playwright-report/

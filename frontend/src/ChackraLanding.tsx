@@ -1,0 +1,18 @@
+import Icon from './ChackraIcon'
+
+type Props={lang:'es'|'en';onStart:()=>void;onMap:()=>void}
+
+/** A compact invitation: the interactive map immediately below is the hero. */
+export default function ChackraLanding({lang,onStart,onMap}:Props){
+ const es=lang==='es'
+ return <section className="chackra-landing chackra-map-intro" data-bio-target="bio-hero">
+  <div className="chackra-badge"><span className="chackra-badge-tag">CHACKRA X</span><i/>{es?'Tu tierra. Tu decisión.':'Your land. Your decision.'}</div>
+  <h1>{es?<>Conoce tu terreno.<br/>Prepara tu próxima <em>siembra.</em></>:<>Explore your field.<br/>Plan your next <em>planting.</em></>}</h1>
+  <p>{es?'Delimita tu tierra, ubica lo que sembraste y revisa un plan por zonas. Tres pasos sencillos, con información científica detrás.':'Outline your field, record crops by area and review a zone-by-zone plan. Three simple steps, backed by evidence.'}</p>
+  <div className="chackra-map-intro-actions">
+   <button type="button" className="chackra-primary" data-bio-target="bio-start" onClick={onStart}>{es?'Ver un ejemplo':'Try an example'}<Icon name="arrow-right" size={18}/></button>
+   <button type="button" className="chackra-text-button" onClick={onMap}>{es?'Dibujar mi terreno':'Outline my land'}</button>
+  </div>
+  
+ </section>
+}

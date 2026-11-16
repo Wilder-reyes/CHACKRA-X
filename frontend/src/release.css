@@ -1,0 +1,23 @@
+/* Final release corrections; preserve the existing premium visual system. */
+@media screen {
+ .b-app .b-brand b,.b-app .b-footer strong{text-transform:uppercase!important}
+ .b-app .b-brand b{font-size:clamp(15px,2vw,23px)!important;letter-spacing:.025em!important}
+ .bio-guide-root{position:static!important;inset:auto!important;max-width:none!important;pointer-events:auto!important;margin:20px auto;padding:0 16px;width:min(100%,760px)}
+ .bio-guide-root .choklito-tour.bio-guided-card,.bio-guide-root .choklito-tour.bio-guided-top{position:static!important;width:100%!important;max-width:none!important;max-height:none!important}
+ .bio-guide-root .bio-repeat{position:static!important;max-width:none!important}
+ .bio-shade{pointer-events:none!important;touch-action:auto!important;background:transparent!important;box-shadow:none!important}
+ .choklito-welcome{pointer-events:auto;z-index:7000!important}
+ .choklito-drag-example{color:#183d2c}
+ .chackra-month-status{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:10px;margin:18px 0}
+ .chackra-month-status>div{padding:14px;background:#ffffff08;border:1px solid #ffffff20;border-radius:14px;min-width:0}
+ .chackra-month-status strong,.chackra-month-status small{display:block;overflow-wrap:anywhere}
+ .chackra-month-status small{margin-top:7px;color:#bdd0b7}
+ .chackra-zone-page>.b-next{grid-column:1/-1!important;grid-row:auto!important}
+ .chackra-share-notice{padding:14px;border:1px solid #D6F86666;border-radius:12px}
+ .chackra-advice-warning{font-size:14px;color:#ddcf9a}
+ .b-app.chackra-farmer-clean .b-progress-wrap{position:relative!important;inset:auto!important;z-index:10!important;margin:14px auto!important}
+ .b-app .b-header-inner{flex-wrap:wrap}
+ .b-app .b-header-tools{margin-left:auto}
+}
+@media(prefers-reduced-motion:reduce){.choklito-moving-crop{animation:none!important}}
+@media print{.chackra-month-status{display:none}.chackra-print-zone,.chackra-print-year{break-inside:avoid}a{overflow-wrap:anywhere}}

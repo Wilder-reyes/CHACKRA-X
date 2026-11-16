@@ -1,0 +1,45 @@
+import os
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from app.api.routes import router
+from app.api.arie_routes import router as arie_router
+from app.api.history_routes import router as history_router
+from app.api.satellite_routes import router as satellite_router
+from app.api.terrain_routes import router as terrain_router
+from app.api.ndvi_routes import router as ndvi_router
+from app.api.imerg_polygon_routes import router as imerg_polygon_router
+from app.api.smap_routes import router as smap_router
+from app.api.gaez_routes import router as gaez_router
+from app.api.rotation_routes import router as rotation_router
+from app.api.andes_routes import router as andes_router
+from app.api.scientific_sources_routes import router as scientific_sources_router
+from app.api.ai_evidence_routes import router as ai_evidence_router
+
+app = FastAPI(
+    title="CHACKRA X API",
+    description=("CHACKRA X by team CHACKRA X (NASA Space Apps 2026, Field Shift): crop-rotation decision support "
+                 "for irrigated coastal farms using NASA HLS, NASA POWER and GPM IMERG. Relative estimates, not yield or savings guarantees."),
+    version="1.0.0",
+)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[origin.strip().rstrip("/") for origin in os.getenv("CORS_ORIGINS", "http://localhost:5173,http://127.0.0.1:5173").split(",") if origin.strip() and origin.strip() != "*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+app.include_router(router)
+app.include_router(arie_router)
+app.include_router(history_router)
+
+app.include_router(satellite_router)
+app.include_router(terrain_router)
+app.include_router(ndvi_router)
+app.include_router(imerg_polygon_router)
+app.include_router(smap_router)
+app.include_router(gaez_router)
+app.include_router(rotation_router)
+app.include_router(andes_router)
+app.include_router(scientific_sources_router)
+
+app.include_router(ai_evidence_router)

@@ -1,0 +1,21 @@
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-width:320px;font-family:system-ui,sans-serif}button,input,textarea,select{font:inherit}button{cursor:pointer}button:disabled{opacity:.55;cursor:not-allowed}a{color:inherit}textarea{display:block;width:100%;min-height:100px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+@media print{@page{size:A4;margin:18mm}.choklito-tour,.bio-repeat{display:none!important}}
+.satellite-panel{border:1px solid var(--border,#d7dfd9);border-radius:18px;padding:18px;margin:16px 0;background:var(--surface,#fff)}
+.satellite-panel-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+.satellite-panel-heading h3{font-size:1.04rem;display:flex;align-items:center;gap:8px;margin:0 0 8px}
+.satellite-panel-heading p{margin:0 0 10px;line-height:1.5}
+.satellite-load{background:#215b43;color:#fff;padding:10px 15px;border-radius:10px;border:0;cursor:pointer;font-weight:650;white-space:nowrap}
+.satellite-load:disabled{opacity:.55;cursor:not-allowed}
+.satellite-scenes ul{list-style:none;padding:0;margin:8px 0}
+.satellite-scenes li{padding:9px 0;border-bottom:1px solid #d9e2dc;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.satellite-error{color:#b42318;font-weight:600}
+@media(max-width:620px){.satellite-panel-heading{flex-direction:column}.satellite-load{width:100%}.satellite-panel{padding:14px}}
+/* Printed page numbers; browsers supporting CSS paged-media margin boxes render them. */
+@media print {
+ @page {
+  size:A4 portrait;
+  margin:18mm;
+  @bottom-right {content:"CHACKRA X · " counter(page);font:8pt Arial,sans-serif;color:#607365}
+ }
+}

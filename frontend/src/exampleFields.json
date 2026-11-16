@@ -1,0 +1,138 @@
+{
+ "_note": "Example fields for the rotation comparator. team_fields: huaral-1/2 and barranca-1/2, found by HLS NDVI variability and reviewed by the team on satellite imagery ('Terreno representativo identificado en imagen; no corresponde a un agricultor identificado'). After editing, run: python scripts/precompute_rotation_history.py",
+ "team_fields": [
+  {
+   "id": "barranca-1",
+   "zone": "barranca",
+   "label_es": "Barranca · terreno pelado varias veces al año",
+   "label_en": "Barranca · field often left bare",
+   "polygon": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -77.739236,
+       -10.699368
+      ],
+      [
+       -77.737867,
+       -10.699354
+      ],
+      [
+       -77.737852,
+       -10.700708
+      ],
+      [
+       -77.739222,
+       -10.700723
+      ],
+      [
+       -77.739236,
+       -10.699368
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "barranca-2",
+   "zone": "barranca",
+   "label_es": "Barranca · terreno con cobertura más continua",
+   "label_en": "Barranca · field with more continuous cover",
+   "polygon": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -77.667242,
+       -10.670163
+      ],
+      [
+       -77.665872,
+       -10.670148
+      ],
+      [
+       -77.665858,
+       -10.671503
+      ],
+      [
+       -77.667227,
+       -10.671517
+      ],
+      [
+       -77.667242,
+       -10.670163
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "huaral-1",
+   "zone": "huaral",
+   "label_es": "Huaral · terreno pelado varias veces al año",
+   "label_en": "Huaral · field often left bare",
+   "polygon": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -77.125365,
+       -11.557588
+      ],
+      [
+       -77.123991,
+       -11.557598
+      ],
+      [
+       -77.124001,
+       -11.558954
+      ],
+      [
+       -77.125376,
+       -11.558944
+      ],
+      [
+       -77.125365,
+       -11.557588
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "huaral-2",
+   "zone": "huaral",
+   "label_es": "Huaral · terreno con cobertura más continua",
+   "label_en": "Huaral · field with more continuous cover",
+   "polygon": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -77.130606,
+       -11.486783
+      ],
+      [
+       -77.129232,
+       -11.486793
+      ],
+      [
+       -77.129242,
+       -11.488149
+      ],
+      [
+       -77.130616,
+       -11.488139
+      ],
+      [
+       -77.130606,
+       -11.486783
+      ]
+     ]
+    ]
+   }
+  }
+ ],
+ "test_fields": []
+}

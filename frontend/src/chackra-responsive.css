@@ -1,0 +1,210 @@
+/* CHACKRA X — mobile & tablet UX audit, 320–1280px.
+   Imported last. Print reports and technical calculations remain unchanged. */
+@media screen{
+ .b-app.chackra-farmer-clean :is(.b-main,.b-header-inner,.b-progress-shell,.b-farm-grid,.b-search-card,.chackra-zone-page,.chackra-zone-choices,.chackra-crop-grid,.chackra-crop-section,.chackra-zone-map-wrap,.chackra-calendar,.chackra-quarter-row,.chackra-quarter-cell,.chackra-aerial-plan,.chackra-aerial-frame),.chackra-information :is(.chackra-info-nav,.chackra-info-main,.chackra-story-card,.chackra-source-card){min-width:0;max-width:100%}
+ .b-app.chackra-farmer-clean :is(.b-btn,.chackra-crop-card,.chackra-zone-choice,.chackra-primary,.chackra-text-button,.chackra-nav-cta,.chackra-horizon-buttons button,.chackra-calendar-years button,.chackra-calendar-months button){touch-action:manipulation;overflow-wrap:anywhere}
+ .b-app.chackra-farmer-clean :is(.b-btn,.chackra-crop-when button,.chackra-horizon-buttons button,.chackra-calendar-years button,.chackra-calendar-months button,.chackra-zone-map-actions button){min-height:48px;white-space:normal}
+ .b-app.chackra-farmer-clean :is(button,a,input,select,summary):focus-visible,.chackra-information :is(button,a):focus-visible{outline:3px solid #D6F866;outline-offset:3px}
+ .b-app.chackra-farmer-clean .chackra-zone-map-wrap{isolation:isolate}
+ .chackra-zone-move-icon>span{width:44px!important;height:44px!important;font-size:26px!important;display:grid;place-items:center}
+ .chackra-zone-resize-icon>span{width:36px!important;height:36px!important;border-radius:10px!important}
+ .b-app.chackra-farmer-clean .chackra-zone-map-actions .b-btn{min-width:0;flex:1 1 150px;padding:10px 13px}
+ .b-app.chackra-farmer-clean .chackra-zone-choice{max-width:100%;overflow-wrap:anywhere}
+ .b-app.chackra-farmer-clean .chackra-calendar-v3 .chackra-quarter-crop{min-width:0;overflow-wrap:anywhere}
+ .chackra-information .chackra-info-nav :is(a,button),.chackra-information .chackra-info-bottom button,.chackra-information .chackra-source-card a{min-height:48px;touch-action:manipulation}
+ .chackra-information .chackra-source-card a{align-self:stretch;justify-content:center;text-align:center;white-space:normal}
+}
+@media screen and (max-width:1100px){
+ .b-app.chackra-farmer-clean .b-header-inner{display:grid!important;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto auto;align-items:center;gap:7px 12px;padding:10px clamp(11px,2.5vw,24px)!important}
+ .b-app.chackra-farmer-clean .b-header-inner>.b-brand{grid-column:1;grid-row:1;min-width:0}
+ .b-app.chackra-farmer-clean .b-header-inner>.b-header-tools{grid-column:2;grid-row:1;margin:0!important;gap:7px}
+ .b-app.chackra-farmer-clean .b-header-inner>.chackra-nav{grid-column:1/-1;grid-row:2;display:flex!important;gap:7px!important;width:100%;justify-content:stretch}
+ .b-app.chackra-farmer-clean .chackra-nav a{display:flex!important;flex:1 1 0;min-height:44px;align-items:center;justify-content:center;border:1px solid #ffffff26;border-radius:11px;padding:8px 12px;background:#ffffff0b;color:#fff!important;font-size:13px;text-align:center}
+ .b-app.chackra-farmer-clean .b-main{padding-left:clamp(14px,2.5vw,28px)!important;padding-right:clamp(14px,2.5vw,28px)!important}
+ .b-app.chackra-farmer-clean .chackra-theme-toggle{min-width:44px!important;min-height:44px!important}
+ .b-app.chackra-farmer-clean .b-language button{min-height:44px!important;min-width:42px}
+}
+@media screen and (min-width:961px) and (max-width:1100px){
+ .b-app.chackra-farmer-clean .chackra-zone-page{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;column-gap:14px}
+ .b-app.chackra-farmer-clean .chackra-zone-page .chackra-crop-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .b-app.chackra-farmer-clean .chackra-zone-page .chackra-zone-map-wrap{top:12px!important}
+}
+@media screen and (min-width:641px) and (max-width:960px){
+ .b-app.chackra-farmer-clean .b-main{padding-bottom:68px!important}
+ .b-app.chackra-farmer-clean .chackra-zone-map,.b-app.chackra-farmer-clean .chackra-zone-map-frame{height:440px!important;min-height:440px!important}
+ .b-app.chackra-farmer-clean .chackra-zone-page .chackra-crop-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:10px}
+ .b-app.chackra-farmer-clean .chackra-zone-page .chackra-crop-card{min-height:104px!important;padding:11px 7px!important}
+ .b-app.chackra-farmer-clean .chackra-zone-page>.b-next{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+ .b-app.chackra-farmer-clean .chackra-zone-page>.b-next .b-btn{min-width:0;width:100%}
+ .b-app.chackra-farmer-clean .chackra-horizon-actions,.b-app.chackra-farmer-clean .chackra-result-actions{display:flex;gap:10px;flex-wrap:wrap}
+ .b-app.chackra-farmer-clean :is(.chackra-horizon-actions,.chackra-result-actions) .b-btn{flex:1 1 205px}
+ .b-app.chackra-farmer-clean .chackra-calendar-months{grid-template-columns:repeat(6,minmax(0,1fr));gap:8px}
+ .b-app.chackra-farmer-clean .chackra-aerial-map{height:clamp(390px,53vw,525px)!important}
+ .chackra-information .chackra-info-main{padding:40px 22px}
+}
+@media screen and (max-width:640px){
+ html{scroll-padding-top:14px}
+ .b-app.chackra-farmer-clean{overflow-x:clip}
+ .b-app.chackra-farmer-clean .b-header{position:relative!important;top:auto!important;left:auto!important;right:auto!important;margin:8px 9px 0!important;padding:0!important}
+ .b-app.chackra-farmer-clean .b-header-inner{padding:9px!important;gap:7px!important}
+ .b-app.chackra-farmer-clean .b-brand{gap:5px;overflow:hidden}
+ .b-app.chackra-farmer-clean .b-brand b{font-size:clamp(18px,5vw,22px);line-height:1}
+ .b-app.chackra-farmer-clean .b-brand small{display:none}
+ .b-app.chackra-farmer-clean .b-brand-mark{width:33px!important;height:33px!important;flex:none}
+ .b-app.chackra-farmer-clean .b-brand-mark svg{width:30px;height:30px}
+ .b-app.chackra-farmer-clean .b-header-tools{gap:4px!important}
+ .b-app.chackra-farmer-clean .chackra-nav-cta{width:44px!important;min-width:44px!important;height:44px!important;padding:0!important;font-size:0!important;border-radius:12px}
+ .b-app.chackra-farmer-clean .chackra-nav-long,.b-app.chackra-farmer-clean .chackra-nav-short{display:none!important}
+ .b-app.chackra-farmer-clean .chackra-theme-toggle{width:44px!important;min-width:44px!important;min-height:44px!important;padding:0!important;font-size:18px!important}
+ .b-app.chackra-farmer-clean .b-language{gap:0;padding:1px!important}
+ .b-app.chackra-farmer-clean .b-language button{min-width:37px!important;width:37px!important;min-height:44px!important;font-size:12px!important;padding:0!important}
+ .b-app.chackra-farmer-clean .chackra-nav{gap:6px!important}
+ .b-app.chackra-farmer-clean .chackra-nav a{min-height:44px;font-size:13px;padding:7px 8px}
+ .b-app.chackra-farmer-clean .b-main{padding:14px 13px calc(125px + env(safe-area-inset-bottom,0px))!important}
+ .b-app.chackra-farmer-clean .chackra-map-intro{padding:10px 0!important}
+ .b-app.chackra-farmer-clean .chackra-map-intro h1{font-size:clamp(29px,7.5vw,39px)!important;line-height:1.12;margin:12px 0!important}
+ .b-app.chackra-farmer-clean .chackra-map-intro>p{font-size:15px!important;line-height:1.5}
+ .b-app.chackra-farmer-clean .chackra-map-intro-actions{display:grid;grid-template-columns:1fr;gap:9px}
+ .b-app.chackra-farmer-clean .chackra-map-intro-actions :is(.chackra-primary,.chackra-text-button){width:100%;min-height:52px;justify-content:center;padding:12px 14px;font-size:15px}
+ .b-app.chackra-farmer-clean .b-progress-wrap{position:fixed!important;inset:auto 0 0!important;z-index:1040!important;margin:0!important;padding:5px 9px calc(5px + env(safe-area-inset-bottom,0px))!important;border-radius:17px 17px 0 0;background:#0b160eec;box-shadow:0 -6px 24px #0007}
+ .b-app.chackra-farmer-clean .b-progress-shell{padding:3px!important;display:block!important}
+ .b-app.chackra-farmer-clean .b-progress-label{display:none}
+ .b-app.chackra-farmer-clean .b-progress{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}
+ .b-app.chackra-farmer-clean .b-progress button{min-width:0;min-height:60px;padding:6px 3px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-size:11px;text-align:center}
+ .b-app.chackra-farmer-clean .b-step-number{width:27px;height:27px;font-size:12px}
+ .b-app.chackra-farmer-clean #chackra-field .b-search-card{padding:12px!important;gap:9px}
+ .b-app.chackra-farmer-clean #chackra-field .b-map{height:clamp(300px,53vh,420px)!important;min-height:300px!important}
+ .b-app.chackra-farmer-clean #chackra-field .b-map-frame{border-radius:17px!important}
+ .b-app.chackra-farmer-clean #chackra-field .b-map-actions{padding:9px!important;display:flex;flex-wrap:wrap;gap:8px;align-items:stretch}
+ .b-app.chackra-farmer-clean #chackra-field .b-map-actions .b-btn{flex:1 1 128px;min-width:0;min-height:48px}
+ .b-app.chackra-farmer-clean #chackra-field .b-search{display:grid;grid-template-columns:1fr;gap:9px}
+ .b-app.chackra-farmer-clean #chackra-field .b-search input{min-width:0;width:100%;min-height:48px;font-size:16px}
+ .b-app.chackra-farmer-clean #chackra-field .b-search button{width:100%;min-height:50px}
+ .b-app.chackra-farmer-clean .b-next{display:flex!important;flex-direction:column;align-items:stretch;gap:9px;padding:12px!important}
+ .b-app.chackra-farmer-clean .b-next .b-btn{width:100%;min-width:0!important;flex:0 0 auto;min-height:49px}
+ .b-app.chackra-farmer-clean .b-next-context{width:100%;flex:0 0 auto}
+ .b-app.chackra-farmer-clean .chackra-zone-page{gap:11px;padding-top:0!important}
+ .b-app.chackra-farmer-clean .chackra-zone-page>.b-intro{padding:9px 0!important}
+ .b-app.chackra-farmer-clean .chackra-zone-page>.b-intro h1{font-size:clamp(26px,7.3vw,35px)!important}
+ .b-app.chackra-farmer-clean .chackra-zone-page>.b-intro>p{font-size:15px;line-height:1.5}
+ .b-app.chackra-farmer-clean .chackra-zones-heading{margin:5px 0;gap:7px;flex-wrap:wrap}
+ .b-app.chackra-farmer-clean .chackra-zone-choices{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ .b-app.chackra-farmer-clean .chackra-zone-choice{min-width:0;min-height:92px!important;padding:12px 10px!important;gap:5px}
+ .b-app.chackra-farmer-clean .chackra-zone-choice :is(span,small,strong){max-width:100%;font-size:clamp(11px,3.3vw,14px);line-height:1.3;overflow-wrap:anywhere}
+ .b-app.chackra-farmer-clean .chackra-crop-section{padding:13px!important;margin:5px 0;border-radius:18px}
+ .b-app.chackra-farmer-clean .chackra-crop-section h2{font-size:21px;margin:0 0 9px!important}
+ .b-app.chackra-farmer-clean .chackra-crop-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px}
+ .b-app.chackra-farmer-clean .chackra-crop-card{min-height:94px!important;padding:10px 5px!important;gap:7px}
+ .b-app.chackra-farmer-clean .chackra-crop-card .chackra-crop-art{font-size:30px}
+ .b-app.chackra-farmer-clean .chackra-crop-card>span:nth-child(2){font-size:13px;line-height:1.3}
+ .b-app.chackra-farmer-clean .chackra-zone-map-wrap{padding:8px!important;border-radius:17px}
+ .b-app.chackra-farmer-clean .chackra-zone-map-frame,.b-app.chackra-farmer-clean .chackra-zone-map{height:350px!important;min-height:350px!important}
+ .b-app.chackra-farmer-clean .chackra-zone-map-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;padding:9px 0}
+ .b-app.chackra-farmer-clean .chackra-zone-map-actions span{grid-column:1/-1;min-width:0}
+ .b-app.chackra-farmer-clean .chackra-zone-map-actions .b-btn{width:100%;min-height:48px}
+ .b-app.chackra-farmer-clean .chackra-horizon{width:100%;max-width:100%;margin:15px 0;padding:19px 15px!important;border-radius:19px}
+ .b-app.chackra-farmer-clean .chackra-horizon h1{font-size:clamp(25px,7.2vw,35px)}
+ .b-app.chackra-farmer-clean .chackra-horizon-buttons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:15px 0}
+ .b-app.chackra-farmer-clean .chackra-horizon-buttons button{width:100%;min-height:50px}
+ .b-app.chackra-farmer-clean .chackra-horizon-actions,.b-app.chackra-farmer-clean .chackra-result-actions{display:grid;grid-template-columns:1fr;gap:9px}
+ .b-app.chackra-farmer-clean :is(.chackra-horizon-actions,.chackra-result-actions) .b-btn{width:100%;min-height:50px}
+ .b-app.chackra-farmer-clean .chackra-plan-highlight{padding:12px 14px;gap:5px 14px;align-items:baseline}
+ .b-app.chackra-farmer-clean .chackra-plan-highlight strong{font-size:clamp(23px,6.6vw,30px)}
+ .b-app.chackra-farmer-clean .chackra-aerial-plan{margin:13px 0;padding:9px;border-radius:18px}
+ .b-app.chackra-farmer-clean .chackra-aerial-map{height:clamp(300px,63vw,385px)!important;min-height:300px!important}
+ .b-app.chackra-farmer-clean .chackra-aerial-plan .leaflet-tooltip.chackra-crop-map-label{font-size:10px;max-width:110px}
+ .b-app.chackra-farmer-clean .chackra-calendar-v3{padding:12px!important;border-radius:17px}
+ .b-app.chackra-farmer-clean .chackra-calendar-intro{gap:10px}
+ .b-app.chackra-farmer-clean .chackra-calendar-intro h2{font-size:clamp(22px,6vw,27px)}
+ .b-app.chackra-farmer-clean .chackra-calendar-v3 .chackra-calendar-active{min-width:0;padding:8px 11px}
+ .b-app.chackra-farmer-clean .chackra-calendar-v3 .chackra-calendar-active strong{font-size:18px}
+ .b-app.chackra-farmer-clean .chackra-calendar-years{gap:7px;margin:14px 0 12px}
+ .b-app.chackra-farmer-clean .chackra-calendar-years button{min-height:47px;min-width:65px;padding:8px 12px;font-size:15px}
+ .b-app.chackra-farmer-clean .chackra-calendar-months{grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;margin-bottom:14px}
+ .b-app.chackra-farmer-clean .chackra-calendar-months button{min-height:46px;font-size:13px;padding:7px 2px}
+ .b-app.chackra-farmer-clean .chackra-quarter-row{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ .b-app.chackra-farmer-clean .chackra-quarter-cell{min-height:90px;padding:8px}
+ .b-app.chackra-farmer-clean .chackra-quarter-crop{padding:9px 7px}
+ .b-app.chackra-farmer-clean .chackra-quarter-crop strong{font-size:12px}
+ .b-app.chackra-farmer-clean .chackra-advice-card{padding:16px;border-radius:16px}
+ .b-app.chackra-farmer-clean .chackra-result-advice{grid-template-columns:minmax(0,1fr);gap:12px}
+ .b-app.chackra-farmer-clean .b-footer{display:grid;gap:15px;padding:22px 15px calc(104px + env(safe-area-inset-bottom,0px))}
+ .b-app.chackra-farmer-clean .b-footer-links{display:flex;flex-wrap:wrap;gap:10px}
+ .b-app.chackra-farmer-clean .b-footer-links a{min-height:44px;display:inline-flex;align-items:center}
+ .bio-guide-root{inset:auto 9px calc(89px + env(safe-area-inset-bottom,0px)) auto!important;max-width:calc(100vw - 18px)}
+ .choklito-tour.bio-guided-card{max-width:min(350px,calc(100vw - 18px));max-height:min(250px,45dvh);overflow-y:auto;padding:12px 13px}
+ .choklito-tour.bio-guided-top{top:9px!important;right:9px!important;bottom:auto!important;max-height:min(230px,42dvh)}
+ .choklito-tour .choklito-tour-top{gap:7px}
+ .choklito-tour .choklito-tour-top .bio-mascot{width:53px;height:75px}
+ .choklito-tour .choklito-tour-top strong{font-size:15px}
+ .choklito-tour .choklito-tour-top p{font-size:12px;line-height:1.42;margin:5px 0}
+ .choklito-tour .bio-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+ .choklito-tour .bio-actions button{min-height:44px;font-size:12px;white-space:normal;padding:8px}
+ .bio-repeat{min-height:48px}
+ .chackra-information .chackra-info-nav{padding:11px 13px;gap:7px}
+ .chackra-information .chackra-info-nav nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%;gap:6px}
+ .chackra-information .chackra-info-nav nav :is(a,button){min-width:0;width:100%;font-size:12px;padding:7px 5px;overflow-wrap:anywhere;min-height:48px}
+ .chackra-information .chackra-info-main{padding:28px 15px}
+ .chackra-information .chackra-info-intro h1{font-size:clamp(30px,8vw,41px);overflow-wrap:anywhere}
+ .chackra-information .chackra-story-card{padding:13px;border-radius:18px;gap:14px}
+ .chackra-information .chackra-source-card{padding:17px;border-radius:18px}
+ .chackra-information .chackra-source-card h2{font-size:23px;overflow-wrap:anywhere}
+ .chackra-information .chackra-info-bottom button{width:100%;justify-content:center}
+}
+@media screen and (max-width:350px){
+ .b-app.chackra-farmer-clean .b-header{margin-left:5px!important;margin-right:5px!important}
+ .b-app.chackra-farmer-clean .b-header-inner{padding:7px!important}
+ .b-app.chackra-farmer-clean .b-brand b{font-size:18px}
+ .b-app.chackra-farmer-clean .b-brand-mark{width:29px!important;height:29px!important}
+ .b-app.chackra-farmer-clean .b-header-tools{gap:3px!important}
+ .b-app.chackra-farmer-clean .chackra-nav-cta,.b-app.chackra-farmer-clean .chackra-theme-toggle{min-width:40px!important;width:40px!important}
+ .b-app.chackra-farmer-clean .b-language button{min-width:35px!important;width:35px!important}
+ .b-app.chackra-farmer-clean .chackra-zone-choices{grid-template-columns:1fr}
+ .b-app.chackra-farmer-clean .chackra-zone-choice{min-height:76px!important}
+}
+@media screen and (prefers-reduced-motion:reduce){.b-app.chackra-farmer-clean button,.choklito-tour{transition:none!important;animation:none!important}}
+
+
+/* CHACKRA X finishing pass: footer, map clearance, compact advice and mobile safe areas */
+@media screen {
+ .b-app.chackra-farmer-clean .b-footer {display:flex!important;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 28px;border-top:1px solid #ffffff22}
+ .b-app.chackra-farmer-clean .b-footer>div:first-child strong{font-size:20px;letter-spacing:.07em;text-transform:uppercase;color:#D6F866;white-space:nowrap}
+ .b-app.chackra-farmer-clean .b-footer-links{display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;align-items:center;gap:10px 24px!important;min-width:0}
+ .b-app.chackra-farmer-clean .b-footer-links>a{display:inline-flex;align-items:center;min-height:44px;white-space:nowrap}
+ .b-app.chackra-farmer-clean .b-footer-links>span{flex:1 1 100%;font-size:12px;color:#b5c9b0}
+ .b-app.chackra-farmer-clean .chackra-zone-map-wrap{position:relative!important;top:auto!important;bottom:auto!important;z-index:1!important;transform:none!important}
+ .b-app.chackra-farmer-clean .chackra-zone-page>.b-next{position:relative!important;top:auto!important;bottom:auto!important;z-index:2!important;transform:none!important;clear:both;margin-top:24px!important;background:#101a13;border:1px solid #ffffff28;border-radius:16px;padding:14px!important;display:flex;flex-wrap:wrap;gap:10px}
+ .b-app.chackra-farmer-clean .chackra-zone-page>.b-next button{flex:1 1 180px;min-width:0;min-height:48px}
+ .b-app.chackra-farmer-clean .chackra-advice-card{box-shadow:0 12px 35px #0003;min-width:0}
+ .b-app.chackra-farmer-clean .chackra-advice-card h2{display:flex;align-items:center;gap:8px;font-size:clamp(22px,3vw,30px)}
+ .b-app.chackra-farmer-clean .chackra-advice-card details[open] ol{display:grid;gap:10px;padding-left:23px}
+ .b-app.chackra-farmer-clean .chackra-advice-card details[open] li{padding-left:7px;line-height:1.5}
+ .b-app.chackra-farmer-clean .chackra-result-actions{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px}
+ .b-app.chackra-farmer-clean .chackra-result-actions button{flex:1 1 180px;min-height:48px}
+ .choklito-welcome{position:fixed;inset:0;display:grid;place-items:center;padding:18px;background:#020702e8;backdrop-filter:blur(9px);z-index:3000}
+ .choklito-welcome-card{width:min(470px,100%);max-height:calc(100dvh - 36px);overflow:auto;text-align:center;background:linear-gradient(160deg,#172517,#090e0b);border:1px solid #d6f86666;border-radius:26px;padding:clamp(20px,4vw,34px);color:#f7f9ef;box-shadow:0 20px 90px #000a}
+ .choklito-welcome-card>.bio-mascot{height:120px;width:88px;display:block;margin:0 auto 12px}
+ .choklito-welcome-card>span{display:block;color:#D6F866;font-weight:900;letter-spacing:.16em}
+ .choklito-welcome-card h2{font-size:clamp(24px,5vw,33px);line-height:1.17;margin:12px 0}
+ .choklito-welcome-card p{font-size:15px;line-height:1.6;color:#d9e4d4}
+ .choklito-welcome-card button{display:block;width:100%;min-height:50px;padding:11px 15px;border:0;border-radius:12px;background:#D6F866;color:#081109;font-weight:800;cursor:pointer;margin-top:12px}
+ .choklito-welcome-card button.choklito-welcome-skip{background:#ffffff17;color:#eef5e9;border:1px solid #ffffff44}
+ .choklito-drag-example{margin:10px 0;display:flex;align-items:center;justify-content:space-around;gap:8px;font-size:12px;font-weight:800;background:#e8f5e3;border-radius:10px;padding:9px}
+ .choklito-example-path{position:relative;flex:1;border-top:2px dashed #3b7d4e;height:2px}
+ .choklito-moving-crop{position:absolute;top:-15px;left:0;animation:choklito-drag 2.8s ease-in-out infinite}
+ @keyframes choklito-drag{0%,10%{left:0;transform:scale(1)}70%,90%{left:calc(100% - 20px);transform:scale(1.2)}100%{left:0;transform:scale(1)}}
+}
+@media screen and (max-width:640px){
+ .b-app.chackra-farmer-clean .b-footer{padding-bottom:calc(112px + env(safe-area-inset-bottom,0px))!important;align-items:flex-start}
+ .b-app.chackra-farmer-clean .b-footer-links{gap:3px 14px!important}
+ .b-app.chackra-farmer-clean .b-footer-links>a{white-space:normal}
+ .b-app.chackra-farmer-clean .chackra-zone-page>.b-next{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin-bottom:15px}
+ .b-app.chackra-farmer-clean .chackra-zone-page>.b-next button:last-child{grid-column:1/-1}
+ .b-app.chackra-farmer-clean .chackra-zone-page>.b-next button{width:100%}
+ .b-app.chackra-farmer-clean .chackra-result-actions{display:grid;grid-template-columns:1fr}
+ .choklito-welcome{padding:10px}
+ .choklito-welcome-card{padding:18px;border-radius:19px;max-height:calc(100dvh - 20px)}
+ .choklito-welcome-card>.bio-mascot{height:90px;width:65px}
+}
+@media print{.choklito-welcome,.choklito-drag-example{display:none!important}.chackra-print-zone{break-inside:avoid}.chackra-spatial-print header strong{text-transform:uppercase}}
+@media (prefers-reduced-motion:reduce){.choklito-moving-crop{animation:none!important}}
